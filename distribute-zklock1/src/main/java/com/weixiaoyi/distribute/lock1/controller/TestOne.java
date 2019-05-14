@@ -28,7 +28,9 @@ public class TestOne {
                 System.out.println("节点被删除" + path);
             }
         };
-        zkClient.subscribeDataChanges("/locks/zklock",iZkDataListener);
+        zkClient.subscribeDataChanges("/locks/lock1",iZkDataListener);
+        zkClient.unsubscribeDataChanges("/locks/lock1",iZkDataListener);
+        zkClient.subscribeDataChanges("/locks/lock2",iZkDataListener);
 
         //junit测试时，防止线程退出
         /*TimeUnit.SECONDS.sleep(15);*/
