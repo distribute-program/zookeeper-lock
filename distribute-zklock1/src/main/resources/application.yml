@@ -1,0 +1,8 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: zklock1
+zklock:
+  cliPath: 127.0.0.1:2181
+  rootpath: /locks
