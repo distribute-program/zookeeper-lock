@@ -71,7 +71,7 @@ public class ZookeeperLock implements Lock {
         try {
             // 创建节点 创建成功得到锁则返回true  否则返回false
             zkClient.createEphemeral(LOCK_ROOT_PATH + createNodeName);
-            log.info("创建临时节点 拿到锁，返回结果为：{}");
+            log.info("创建临时节点 拿到锁");
             return true;
         }catch (Exception e) {
             log.info("获取锁失败");
